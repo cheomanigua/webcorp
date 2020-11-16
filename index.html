@@ -139,8 +139,11 @@
 
   <! FOOTER >
   <footer id="mainFooter">
-    <div><a href="#home">WebCorp Dev</a> &#169; 2020</div>
+    <div><a href="#home">WebCorp Dev</a> &#169; <span id="year"></span></div>
     <div>Project by Sergio Sánchez</div>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
   </footer>
 
 </body>
