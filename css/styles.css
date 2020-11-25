@@ -1,4 +1,6 @@
-*{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -43,10 +45,11 @@ section {
 
 section:nth-of-type(odd) {
   background: var(--color-odd);
+  padding: 5rem 10%;
 }
 
 img {
-  display: block;
+  /*display: block;*/
   width: 100%;
   height: auto;
 }
@@ -67,7 +70,7 @@ a {
 
 a:focus {
   outline: 2px solid var(--color-secondary);
-  outline-offset: 5px;
+  /* outline-offset: 5px; */
 }
 
 ul {
@@ -79,16 +82,17 @@ header {
   height: var(--vh);
   color: var(--color-secondary);
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 0 1rem;
+  gap: 4rem;
 
 }
 
 header .bg-image {
   position: absolute;
-   background: url('../images/hero.svg');
+  background:  url('../images/hero.svg');
   /*background: var(--color-auxiliary);*/
   background-position: center;
   background-repeat: no-repeat;
@@ -96,7 +100,7 @@ header .bg-image {
   width: 100%;
   height: var(--vh);
   z-index:-1;
-  /*opacity: 0.2;*/
+  /* opacity: 0.2; */
 }
 
 .btn {
@@ -144,6 +148,7 @@ nav a {
 
 nav a:hover {
   background: var(--color-complementary);
+  /* border-bottom: 2px var(--color-secondary) solid; */
 }
 
 
@@ -224,6 +229,15 @@ td {
     padding-bottom: 5rem;
   }
 
+  .billboard {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+
   nav {
     display: flex;
     justify-content: space-around;
@@ -258,12 +272,6 @@ td {
     flex: 2;
     min-width: 20rem;
     max-width: 25rem;
-  }
-
-  Img {
-    display: block;
-    max-width: 100%;
-    height: auto;
   }
 
   #contact {
