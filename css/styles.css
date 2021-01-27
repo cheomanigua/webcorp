@@ -19,13 +19,12 @@
 
 html {
   scroll-behavior: smooth;
-  /* font-size: 62.5%;
-  font-family: "DosisBold", "Courier New", Courier, monospace;  */
+  font-family: 'Lato', sans-serif, "DosisBold", "Courier New", Courier, monospace;
 }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
   background: var(--color-auxiliary);
   color: var(--color-secondary);
   font-size: 1.1em;
@@ -40,7 +39,7 @@ main {
 section {
   background: var(--color-secondary);
   color: var(--color-primary);
-  padding: 5rem 2em 5rem 2rem;
+  padding: 5rem 2em;
 }
 
 section:nth-of-type(odd) {
@@ -87,7 +86,11 @@ header {
   justify-content: space-around;
   padding: 0 1rem;
   gap: 4rem;
+}
 
+header h3 {
+  font-weight: 300;
+  font-size: 25px;
 }
 
 header .bg-image {
@@ -237,6 +240,16 @@ td {
     justify-content: space-around;
     gap: 3rem;
   }
+
+  header h1 {
+    font-size: 60px;
+  }
+
+  header p {
+    font-size: 25px;
+    padding: 0rem 0 4rem 0;
+  }
+  
 
   nav {
     display: flex;
