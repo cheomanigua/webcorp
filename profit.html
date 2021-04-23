@@ -5,25 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ultimate Javascript Tutorial</title>
     <script src="js/script.js"></script>
+    <style>
+      .resultados {
+        display: flex;
+        margin-left: -40px;
+      }
+      ul {list-style: none;}
+      li {padding: 1rem 5rem 0 0;}
+    </style>
 </head>
 
 <body>
 
   <h1>Stock Market Assistant</h1>
 
-  <ul>    
+  <ul>
       <h3>Profit calculator</h3>
       <p>Introduce el valor correspondiente en cada campo y luego haz click en "Calcular beneficio"</p>
       <p><input id="inversion"> Inversión inicial</p>
       <p><input id="precioCompra"> Precio de compra</p>
       <p><input id="precioVenta"> Precio de venta</p>
       <button type="button" onclick="calculateRevenue()">Calcular beneficio</button>
-      <p id="ingresos"> Ingresos</p>
-      <p id="fees"> Fees</p>
-      <p id="beneficios"> Beneficios</p>
-      <p id="rentabilidad"> Rentabilidad</p>
-      <br><br>
-      <p id="comision"></p>    
+      <ul class="resultados">
+        <li>
+          <p><strong>Binance</strong></p>
+          <p id="ingresos"> Ingresos</p>
+          <p id="fees"> Fees</p>
+          <p id="beneficios"> Beneficios</p>
+          <p id="rentabilidad"> Rentabilidad</p>
+        </li>
+        <li>
+          <p><strong>Coinbase Pro</strong></p>
+          <p id="ingresos2"> Ingresos</p>
+          <p id="fees_coinbase"> Fees</p>
+          <p id="beneficios_coinbase"> Beneficios</p>
+          <p id="rentabilidad_coinbase"> Rentabilidad</p>
+        </li>
+      </ul>
+
+      <p id="comision"></p>
+      <p id="comision_coinbase"></p>  
   </ul>
 
 </body>
