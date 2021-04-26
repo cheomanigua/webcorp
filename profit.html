@@ -6,7 +6,7 @@
     <title>Ultimate Javascript Tutorial</title>
     <script src="js/script.js"></script>
     <style>
-      .resultados {
+      .resultados, .limits {
         display: flex;
         margin-left: -40px;
       }
@@ -20,26 +20,37 @@
   <h1>Stock Market Assistant</h1>
 
   <ul>
-      <h3>Profit calculator</h3>
-      <p>Introduce el valor correspondiente en cada campo y luego haz click en "Calcular beneficio"</p>
       <p><input id="inversion"> Inversión inicial</p>
       <p><input id="precioCompra"> Precio de compra</p>
       <p><input id="precioVenta"> Precio de venta</p>
+      <button type="button" onclick="calculateStopLoss()">Calcular stop loss</button>
       <button type="button" onclick="calculateRevenue()">Calcular beneficio</button>
+
+
+      <ul class="limits">
+        <li>
+          <p><strong>Stop Loss</strong></p>
+          <p><input id="porcentajestoploss"> % Stop loss</p>
+          <p id="stoplossbuy">Stop loss en largo:</p>
+          <p id="stoplosssell">Stop loss en corto:</p>
+        </li>
+      </ul>
+
+
       <ul class="resultados">
         <li>
           <p><strong>Binance</strong></p>
-          <p id="ingresos"> Ingresos</p>
-          <p id="fees"> Fees</p>
-          <p id="beneficios"> Beneficios</p>
-          <p id="rentabilidad"> Rentabilidad</p>
+          <p id="ingresos">Ingresos:</p>
+          <p id="fees">Fees:</p>
+          <p id="beneficios">Beneficios:</p>
+          <p id="rentabilidad">Rentabilidad:</p>
         </li>
         <li>
           <p><strong>Coinbase Pro</strong></p>
-          <p id="ingresos2"> Ingresos</p>
-          <p id="fees_coinbase"> Fees</p>
-          <p id="beneficios_coinbase"> Beneficios</p>
-          <p id="rentabilidad_coinbase"> Rentabilidad</p>
+          <p id="ingresos2">Ingresos:</p>
+          <p id="fees_coinbase">Fees:</p>
+          <p id="beneficios_coinbase">Beneficios:</p>
+          <p id="rentabilidad_coinbase">Rentabilidad:</p>
         </li>
       </ul>
 

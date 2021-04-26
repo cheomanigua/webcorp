@@ -23,7 +23,6 @@ function calculateRevenue() {
   document.getElementById("rentabilidad").innerHTML = "Rentabilidad: " + rentabilidad.toFixed(2) + "%";
   document.getElementById("comision").innerHTML = "* La comisión de Binance es de un " + comision.toString() + "% de los ingresos totales por transacción";
 
-
   document.getElementById("ingresos2").innerHTML = "Ingresos: " + ingresos.toFixed(2);
   document.getElementById("fees_coinbase").innerHTML = "Fees**: " + fees_coinbase.toFixed(2);
   document.getElementById("beneficios_coinbase").innerHTML = "Beneficio: " + beneficios_coinbase.toFixed(2);
@@ -31,6 +30,15 @@ function calculateRevenue() {
   document.getElementById("comision_coinbase").innerHTML = "** La comisión de Coinbase Pro es de un " + comision_coinbase.toString() + "% de los ingresos totales por transacción";
   }
 
+function calculateStopLoss() {
+  let porcentajestoploss = document.getElementById("porcentajestoploss").value
+  let buy = document.getElementById("precioCompra").value;
+  let sell = document.getElementById("precioVenta").value;
+  let stoplossbuy = buy - buy * (porcentajestoploss/100)
+  let stoplosssell = 1 * sell + sell * (porcentajestoploss/100)
 
+  document.getElementById("stoplossbuy").innerHTML = "Stop loss en largo: " + stoplossbuy.toFixed(4);
+  document.getElementById("stoplosssell").innerHTML = "Stop loss en corto: " + stoplosssell.toFixed(4);
+}
 
   
