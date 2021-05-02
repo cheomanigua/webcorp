@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ultimate Javascript Tutorial</title>
+    <script src="js/script.js"></script>
+    <style>
+      body {
+        font-family: 'Courier New', Courier, monospace;
+      }
+      section {
+        display: flex;
+      }
+      div {
+        margin: 0 1em;
+      }
+    </style>
+</head>
+
+<body>
+
+  <h1>Criptomonedas</h1>
+
+  <p>Las criptomonedas se pueden operar en los <a href="https://coinmarketcap.com/rankings/exchanges/">exchanges</a> de la misma forma que las acciones bursátiles se pueden operar en los <a href="https://es.wikipedia.org/wiki/Br%C3%B3ker">brokers</a>. De igual manera, el <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_t%C3%A9cnico">análisis técnico</a> bursátil se puede aplicar a las criptomonedas.</p>
+  
+  <h2>Fundamentos</h2>
+  <p>El valor de las criptomonedas fluctúa dependiendo de la oferta y la demanda, es decir, de la agresividad compradora o vendedora. Al contrario de lo que se pueda pensar, el valor de las criptos no sube porque haya más compradores o baja porque haya más vendedores. El número de compradores y vendedores es irrelevante. Lo que desequilibra la balanza hacia uno u otro lado es la agresividad de los compradores o los vendedores.</p>
+
+  <p>Para entender el concepto de agresividad, hay que conocer primero los dos tipos de ordenes que se pueden realizar en el mercado: Limit y Market.</p>
+
+  <h3>Limit Orders</h3>
+
+  <p>Una orden de tipo <strong>Limit</strong> prioriza el precio sobre el tiempo, es decir, sólo se ejecutará cuando llegue al precio que queremos, independientemente de cuánto tarde. Por ejemplo, si queremos vender a €2000 por Ethereum, podemos crear una orden limitada donde especificaremos que sólo venderemos un número determinado de Ethereums cuando el valor por Ethereum llegue a €2000. Ese momento puede tardar unos minutos, unas horas, unos días, unas semanas o unos meses.</p>
+  <p>Las ordenes de tipo Limit se pueden consultar en tiempo real desde el <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>. El libro de ordenes únicamente muestra las ordenes tipo Limit y nos puede dar una indicación de hacia dónde puede ir el mercado. Es en cierta manera una forma de "predecir" el futuro.</p>
+
+  <h3>Market Orders</h3>
+  <p>Una orden de tipo <strong>Market</strong> prioriza el tiempo sobre el precio, es decir, se ejecutará lo antes posible utilizando el primer precio de tipo <strong>Limit</strong> que encuentre. Por ejemplo, si queremos comprar Ethereums inmediatamente, podemos crear una orden de mercado donde especificaremos el número de Ethereums que queremos adquirir. Al ejecutar la orden, el <a href="https://en.wikipedia.org/wiki/Order_matching_system">sistema electrónico de negociación</a> buscará la primera orden limitada de venta del <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>.</p>
+  <p>Las ordenes de mercado no se pueden predecir y pueden entrar en cualquier momento. Si entra una orden de mercado con mucho volúmen, puede destrozar cualquier predicción que podamos haber concluido tras analizar el libro de ordenes.</p>
+
+
+  <h3>Agresividad</h3>
+  <p>Un mercado se dice que es alcista cuando la agresividad de los compradores de tipo Market Order es superior a la agresividad de los vendedores de tipo Market Order.</p> 
+  <p>Un mercado se dice que es bajista cuando la agresividad de los vendedores de tipo Market Order es superior a la agresividad de los compradores de tipo Market Order.</p>
+  <p>La agresividad únicamente se da en Market Orders. Los Limits Orders, por su naturaleza pasiva de espera, no afectan tanto a la fluctuación del mercado como los Market Orders.</p>
+ 
+  <h2>Libro de ordenes</h2>
+  <section>
+    <div class="imagen"><img loading="lazy" src="images/order-book.png" alt="order book"/></div>
+    <div class="pepe">
+      <p>En la imágen de la izquierda podemos ver un libro de ordenes (Order Book). En este OB hay tres columnas que corresponden a Price(EUR), Amount(ETH) y Total. En rojo aparecen las ordenes limitadas de venta y en verde aparecen las ordenes limitadas de compra.  Tal como se comentó anteriormente, el OB muestra las Limit Orders activas en ese momento.</p>
+      <p>En un mercado con mucha liquidez y volatilidad, la información que aparece en el OB fluctúa muy rápidamente y es difícil de seguir. Para facilitar el seguimiento de esta información, es posible visualizar la fluctuación de un OB utilizando una herramienta gráfica llamada Depth Chart. Hablaremos de la Depth Chart más adelante ya que es uno de los elementos fundamentales en la toma de decisiones para entrar o salir de una operación.</p>
+      <p>Si entra un Market Order de venta, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de compra. En este ejemplo el Price(EUR) sería de 2398.24.</p>
+      <p>Si entra un Market Order de compra, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de venta. En este ejemplo el Price(EUR) sería de 2398.73. De hecho, podemos ver cómo se ha ejecutado una Market Order de compra si nos fijamos en el precio guía actual en verde con dicha cantidad y una flecha indicando que ha subido el precio.</p>
+      <p>Para que un precio fluctúe al alza o a la baja, la orden de compra o venta debe superar en cantidad a la orden de compra o venta limitada con la que se empareje. En nuestro ejemplo de OB, si entra una orden de compra de mercado de 2 Ethereum, el precio fluctuará al alza hasta alcanzar los 2398.83. Esta es la explicación:</p>
+      <ul>
+        <li>La primera orden de venta limitada absorberá parte de la orden de compra de mercado en una cantidad de 0.20846 ETH a un precio de 2398.73 EUR. Por lo tanto, todavía quedan 1.79154 Ethereums de la orden de compra de mercado por ejecutar.</li>
+        <li>La siguiente orden de venta limitada absorberá 1.73378 ETH de la orden de compra de mercado a un precio de 2398.82 EUR. Por lo tanto, todavía quedan 0.05776 Ethereums de la orden de compra de mercado a ejecutar.</li>
+        <li>La siguiente orden de venta limitada absorberá los restantes 0.05776 ETH de la orden de compra de mercado a un precio de 2398.83 EUR. En este punto el precio ha alcanzado 2398.83 EUR y la cantidad ETH a la venta es de 0.20162 para ese precio.</li>
+      </ul>
+    </div>
+  </section>
+
+  <h2>Risk Management</h2>
+  La conservación del capital es la prioridad máxima del trader. La disciplina debe ser total y nunca desviarse del método y del análisis técnico. Los siguientes puntos son esenciales para minimizar el riesgo de pérdidas:
+  <ol>
+    <li>Nunca operar con un márgen de pérdidas superior al 2% de todo el capital disponible. Por ejemplo, si nuestro capital es de €100, en una orden podemos invertir todo el capital y asumir como máximo €2 de pérdidas. Si tenemos dos órdenes abiertas utilizando todo el capital, en cada orden podremos asumir €1 de pérdidas, o €0.5 y €1.5 respectivamente.</li>
+    <li>El método lo es todo. Nunca hay que desviarse del método. No existen las corazonadas ni las intuiciones. Si una operación no está yendo bien y está llegando al 2% de pérdidas, nos salimos de la operación sin dudar. </li>
+    <li>Hay que analizar los mercados detalladamente antes de entrar en una operación. En el momento de entrar en una operación hay que tener claro el precio al que vamos entrar y el precio al que vamos a salir, tanto en Take Profit como en Stop Loss. No se puede improvisar en una orden abierta.</li>
+    <li>No hay que operar todos los dias. Únicamente hay que operar cuando todos los indicadores confirman que podemos entrar en la operación con el mínimo riesgo. Si estamos varios días sin operar, no pasa nada.</li>
+    <li>No hay que ser avaricioso. Siempre hay que asegurar el beneficio y no esperar grandes retornos. Si un día de suerte hay mucha volatilidad, podemos ir acompañando la tendencia moviendo el Stop Loss gradualmente, pero esto ocurre muy de vez en cuando.</li>
+  </ol>
+
+</body>
+</html>
+
+
+
