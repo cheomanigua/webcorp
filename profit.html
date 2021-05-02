@@ -23,11 +23,18 @@
       <p><input id="inversion"> Inversión inicial</p>
       <p><input id="precioCompra"> Precio de compra</p>
       <p><input id="precioVenta"> Precio de venta</p>
-      <button type="button" onclick="calculateStopLoss()">Calcular stop loss</button>
-      <button type="button" onclick="calculateRevenue()">Calcular beneficio</button>
 
+
+      <br><br><br>
+      <button type="button" onclick="calculateTakeProfitStopLoss()">Calcular TakeProfit / StopLoss</button>
 
       <ul class="limits">
+        <li>
+          <p><strong>Take Profit</strong></p>
+          <p><input id="porcentajetakeprofit"> % Take profit</p>
+          <p id="takeprofitbuy">Take profit en largo:</p>
+          <p id="takeprofitsell">Take profit en corto:</p>
+        </li>
         <li>
           <p><strong>Stop Loss</strong></p>
           <p><input id="porcentajestoploss"> % Stop loss</p>
@@ -36,6 +43,8 @@
         </li>
       </ul>
 
+      <br><br><br>
+      <button type="button" onclick="calculateRevenue()">Calcular beneficio</button>
 
       <ul class="resultados">
         <li>

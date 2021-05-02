@@ -30,15 +30,23 @@ function calculateRevenue() {
   document.getElementById("comision_coinbase").innerHTML = "** La comisión de Coinbase Pro es de un " + comision_coinbase.toString() + "%";
   }
 
-function calculateStopLoss() {
-  let porcentajestoploss = document.getElementById("porcentajestoploss").value
+
+function calculateTakeProfitStopLoss() {
+
   let buy = document.getElementById("precioCompra").value;
   let sell = document.getElementById("precioVenta").value;
+  let porcentajetakeprofit = document.getElementById("porcentajetakeprofit").value
+  let porcentajestoploss = document.getElementById("porcentajestoploss").value
+  
+  let takeprofitbuy = 1 * buy + buy * (porcentajetakeprofit/100)
+  let takeprofitsell = 1 * sell - sell * (porcentajetakeprofit/100)
+
   let stoplossbuy = buy - buy * (porcentajestoploss/100)
   let stoplosssell = 1 * sell + sell * (porcentajestoploss/100)
 
+  document.getElementById("takeprofitbuy").innerHTML = "Take profit en largo: " + takeprofitbuy.toFixed(4);
+  document.getElementById("takeprofitsell").innerHTML = "Take profit en corto: " + takeprofitsell.toFixed(4);
   document.getElementById("stoplossbuy").innerHTML = "Stop loss en largo: " + stoplossbuy.toFixed(4);
   document.getElementById("stoplosssell").innerHTML = "Stop loss en corto: " + stoplosssell.toFixed(4);
 }
 
-  
