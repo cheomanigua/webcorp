@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ultimate Javascript Tutorial</title>
+    <title>Cryptocurrency Trading</title>
     <script src="js/script.js"></script>
     <style>
       body {
@@ -17,17 +17,12 @@
       div {
         margin: 0 1em;
       }
-      @media(min-width: 1200px){
-        .depth-chart {
-          display:flex;
-        }
-      }
     </style>
 </head>
 
 <body>
 
-  <h1>Criptocurrency Trading</h1>
+  <h1>Cryptocurrency Trading</h1>
 
   <p>Las criptomonedas se pueden operar en los <a href="https://coinmarketcap.com/rankings/exchanges/">exchanges</a> de la misma forma que las acciones bursátiles se pueden operar en los <a href="https://es.wikipedia.org/wiki/Br%C3%B3ker">brokers</a>. De igual manera, el <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_t%C3%A9cnico">análisis técnico</a> bursátil se puede aplicar a las criptomonedas.</p>
   
@@ -39,11 +34,11 @@
   <h3><strong>Limit Orders</strong></h3>
 
   <p>Una orden de tipo <strong>Limit</strong> prioriza el precio sobre el tiempo, es decir, sólo se ejecutará cuando llegue al precio que queremos, independientemente de cuánto tarde. Por ejemplo, si queremos vender a €2000 por Ethereum, podemos crear una orden limitada donde especificaremos que sólo venderemos un número determinado de Ethereums cuando el valor por Ethereum llegue a €2000. Ese momento puede tardar unos minutos, unas horas, unos días, unas semanas o unos meses.</p>
-  <p>Las ordenes de tipo Limit se pueden consultar en tiempo real desde el <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>. El libro de ordenes únicamente muestra las ordenes tipo Limit y nos puede dar una indicación de hacia dónde puede ir el mercado. Es en cierta manera una forma de "predecir" el futuro.</p>
+  <p>Las ordenes de tipo Limit se pueden consultar en tiempo real desde el <a href="https://en.wikipedia.org/wiki/Order_book">order book</a>. El <strong>order book</strong> únicamente muestra las ordenes tipo <strong>Limit</strong> y nos puede dar una indicación de hacia dónde puede ir el mercado. Es en cierta manera una forma de "predecir" el futuro.</p>
 
   <h3>Market Orders</h3>
-  <p>Una orden de tipo <strong>Market</strong> prioriza el tiempo sobre el precio, es decir, se ejecutará lo antes posible utilizando el primer precio de tipo <strong>Limit</strong> que encuentre. Por ejemplo, si queremos comprar Ethereums inmediatamente, podemos crear una orden de mercado donde especificaremos el número de Ethereums que queremos adquirir. Al ejecutar la orden, el <a href="https://en.wikipedia.org/wiki/Order_matching_system">sistema electrónico de negociación</a> buscará la primera orden limitada de venta del <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>.</p>
-  <p>Las ordenes de mercado no se pueden predecir y pueden entrar en cualquier momento. Si entra una orden de mercado con mucho volumen, puede destrozar cualquier predicción que podamos haber concluido tras analizar el libro de ordenes.</p>
+  <p>Una orden de tipo <strong>Market</strong> prioriza el tiempo sobre el precio, es decir, se ejecutará lo antes posible utilizando el primer precio de tipo <strong>Limit</strong> que encuentre. Por ejemplo, si queremos comprar Ethereums inmediatamente, podemos crear una orden de mercado donde especificaremos el número de Ethereums que queremos adquirir. Al ejecutar la orden, el <a href="https://en.wikipedia.org/wiki/Order_matching_system">sistema electrónico de negociación</a> buscará la primera orden limitada de venta del <a href="https://en.wikipedia.org/wiki/Order_book"><strong>order book</strong></a>.</p>
+  <p>Las ordenes de mercado no se pueden predecir y pueden entrar en cualquier momento. Si entra una orden de mercado con mucho volumen, puede destrozar cualquier predicción que podamos haber concluido tras analizar el <strong>order book</strong>.</p>
 
 
   <h3>Agresividad</h3>
@@ -51,11 +46,11 @@
   <p>Un mercado se dice que es bajista cuando la agresividad de los vendedores de tipo <strong>Market Order</strong> es superior a la agresividad de los compradores de tipo <strong>Market Order</strong>.</p>
   <p>La agresividad únicamente se da en <strong><strong>Market Order</strong>s</strong>. Los Limits Orders, por su naturaleza pasiva de espera, no afectan tanto a la fluctuación del mercado como los <strong><strong>Market Order</strong>s</strong>.</p>
  
-  <h2>Libro de ordenes</h2>
+  <h2>Order Book</h2>
   <section>
     <div><img loading="lazy" src="images/order-book.png" alt="order book"/></div>
     <div>
-      <p>En la imágen de la izquierda podemos ver un libro de ordenes (Order Book). En este<strong> OB </strong>hay tres columnas que corresponden a Price(EUR), Amount(ETH) y Total. En rojo aparecen las ordenes limitadas de venta y en verde aparecen las ordenes limitadas de compra.  Tal como se comentó anteriormente, el<strong> OB </strong>muestra las <strong>Limit Orders</strong> activas en ese momento.</p>
+      <p>En la imágen de la izquierda podemos ver un <strong>order book</strong>. En este<strong> OB </strong>hay tres columnas que corresponden a Price(EUR), Amount(ETH) y Total. En rojo aparecen las ordenes limitadas de venta y en verde aparecen las ordenes limitadas de compra.  Tal como se comentó anteriormente, el<strong> OB </strong>muestra las <strong>Limit Orders</strong> activas en ese momento.</p>
       <p>En un mercado con mucha liquidez y volatilidad, la información que aparece en el<strong> OB </strong>fluctúa muy rápidamente y es difícil de seguir. Para facilitar el seguimiento de esta información, es posible visualizar la fluctuación de un<strong> OB </strong>utilizando una herramienta gráfica llamada <strong>Depth Chart</strong>. Hablaremos de la <strong>Depth Chart</strong> más adelante ya que es uno de los elementos fundamentales en la toma de decisiones para entrar o salir de una operación.</p>
       <p>Si entra un <strong>Market Order</strong> de venta, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de compra. En este ejemplo el Price(EUR) sería de 2398.24.</p>
       <p>Si entra un <strong>Market Order</strong> de compra, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de venta. En este ejemplo el Price(EUR) sería de 2398.73. De hecho, podemos ver cómo se ha ejecutado una <strong>Market Order</strong> de compra si nos fijamos en el precio guía actual en verde con dicha cantidad y una flecha indicando que ha subido el precio.</p>
@@ -87,10 +82,10 @@
 
 
   <h2>Depth Chart</h2>
-  <p>El <strong>Depth Chart</strong> es una representación gráfica del libro de órdenes. Esto nos permite ver con más facilidad las órdenes limitadas de compra y venta que existen en el momento actual. Se puede incrementar o disminuir el nivel de zoom para abarcar más o menos rango de precios.</p>
+  <p>El <strong>Depth Chart</strong> es una representación gráfica del <strong>Order Book</strong>. Esto nos permite ver con más facilidad las órdenes limitadas de compra y venta que existen en el momento actual. Se puede incrementar o disminuir el nivel de zoom para abarcar más o menos rango de precios.</p>
   <p>Con esta información podemos hacernos una idea si hay más agresividad compradora o vendedora, y por lo tanto hacia donde puede fluctuar el precio.</p>
 
-  <div id="depth-chart">
+  <div class="depth-chart">
     <div><img loading="lazy" src="images/depth-chart.png" alt="order book"/></div>
     <div>
       <p>En la imagen del <strong>Depth Chart</strong> podemos ver que hay dos ejes, que corresponden al rango de precios del Ethereum (eje horizontal) y la cantidad o volumen de Ethereums disponibles (eje vertical).</p>
