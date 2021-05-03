@@ -17,6 +17,11 @@
       div {
         margin: 0 1em;
       }
+      @media(min-width: 1200px){
+        .depth-chart {
+          display:flex;
+        }
+      }
     </style>
 </head>
 
@@ -85,14 +90,15 @@
   <p>El <strong>Depth Chart</strong> es una representación gráfica del libro de órdenes. Esto nos permite ver con más facilidad las órdenes limitadas de compra y venta que existen en el momento actual. Se puede incrementar o disminuir el nivel de zoom para abarcar más o menos rango de precios.</p>
   <p>Con esta información podemos hacernos una idea si hay más agresividad compradora o vendedora, y por lo tanto hacia donde puede fluctuar el precio.</p>
 
-  <section>
+  <div id="depth-chart">
     <div><img loading="lazy" src="images/depth-chart.png" alt="order book"/></div>
     <div>
-      <p>La captura de la imágen de la izquierda nos muestra una <strong>Depth Chart</strong>. Podemos ver que hay dos ejes, que corresponden al rango de precios del Ethereum (eje horizontal) y la cantidad o volumen de Ethereums disponibles (eje vertical).</p>
+      <p>En la imagen del <strong>Depth Chart</strong> podemos ver que hay dos ejes, que corresponden al rango de precios del Ethereum (eje horizontal) y la cantidad o volumen de Ethereums disponibles (eje vertical).</p>
       <p>Moviendo el ratón podemos abarcar más o menos rango. En el ejemplo podemos ver que para una fluctuación del 0.1% del precio en ambos sentidos hay un volumen total de 44 Ethereums disponibles a ser comprados y 39 Ethereums disponibles a ser vendidos.</p>
       <p>Por regla general, si el volumen de la zona verde es mayor, los precios tienden a ir hacia abajo. Si el volumen en la zona roja es mayor, los precios tienden a ir hacia arriba.</p>
       <p>Si los indicadores explicados en la sección anterior para entrar en una posición en corto se producen, y comprobamos en la <strong>Depth Chart</strong> que la tendencia es al alza, nos encontramos en un buen momento para entrar en una operación de compra. En nuestro ejemplo no es un buen momento, por lo menos a corto plazo, ya que el rango seleccionado muestra la línea de -0.1% de la zona verda más alta que la línea 0.1% de la zona roja.</p>
-  </section>
+    </div>
+  </div>
 
 
   <h2>Risk Management</h2>
