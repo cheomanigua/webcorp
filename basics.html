@@ -29,14 +29,14 @@
   <h2>Fundamentos</h2>
   <p>El valor de las criptomonedas fluctúa dependiendo de la oferta y la demanda, es decir, de la agresividad compradora o vendedora. Al contrario de lo que se pueda pensar, el valor de las criptos no sube porque haya más compradores o baja porque haya más vendedores. El número de compradores y vendedores es irrelevante. Lo que desequilibra la balanza hacia uno u otro lado es la agresividad de los compradores o los vendedores.</p>
 
-  <p>Para entender el concepto de agresividad, hay que conocer primero los dos tipos de ordenes que se pueden realizar en el mercado: Limit y Market.</p>
+  <p>Para entender el concepto de agresividad, hay que conocer primero los dos tipos de ordenes que se pueden realizar en el mercado: <strong>Limit</strong> y <strong>Market</strong>.</p>
 
   <h3><strong>Limit Orders</strong></h3>
 
   <p>Una orden de tipo <strong>Limit</strong> prioriza el precio sobre el tiempo, es decir, sólo se ejecutará cuando llegue al precio que queremos, independientemente de cuánto tarde. Por ejemplo, si queremos vender a €2000 por Ethereum, podemos crear una orden limitada donde especificaremos que sólo venderemos un número determinado de Ethereums cuando el valor por Ethereum llegue a €2000. Ese momento puede tardar unos minutos, unas horas, unos días, unas semanas o unos meses.</p>
   <p>Las ordenes de tipo Limit se pueden consultar en tiempo real desde el <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>. El libro de ordenes únicamente muestra las ordenes tipo Limit y nos puede dar una indicación de hacia dónde puede ir el mercado. Es en cierta manera una forma de "predecir" el futuro.</p>
 
-  <h3><strong><strong>Market Order</strong>s</strong></h3>
+  <h3>Market Orders</h3>
   <p>Una orden de tipo <strong>Market</strong> prioriza el tiempo sobre el precio, es decir, se ejecutará lo antes posible utilizando el primer precio de tipo <strong>Limit</strong> que encuentre. Por ejemplo, si queremos comprar Ethereums inmediatamente, podemos crear una orden de mercado donde especificaremos el número de Ethereums que queremos adquirir. Al ejecutar la orden, el <a href="https://en.wikipedia.org/wiki/Order_matching_system">sistema electrónico de negociación</a> buscará la primera orden limitada de venta del <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>.</p>
   <p>Las ordenes de mercado no se pueden predecir y pueden entrar en cualquier momento. Si entra una orden de mercado con mucho volumen, puede destrozar cualquier predicción que podamos haber concluido tras analizar el libro de ordenes.</p>
 
@@ -51,7 +51,7 @@
     <div><img loading="lazy" src="images/order-book.png" alt="order book"/></div>
     <div>
       <p>En la imágen de la izquierda podemos ver un libro de ordenes (Order Book). En este<strong> OB </strong>hay tres columnas que corresponden a Price(EUR), Amount(ETH) y Total. En rojo aparecen las ordenes limitadas de venta y en verde aparecen las ordenes limitadas de compra.  Tal como se comentó anteriormente, el<strong> OB </strong>muestra las <strong>Limit Orders</strong> activas en ese momento.</p>
-      <p>En un mercado con mucha liquidez y volatilidad, la información que aparece en el<strong> OB </strong>fluctúa muy rápidamente y es difícil de seguir. Para facilitar el seguimiento de esta información, es posible visualizar la fluctuación de un<strong> OB </strong>utilizando una herramienta gráfica llamada Depth Chart. Hablaremos de la Depth Chart más adelante ya que es uno de los elementos fundamentales en la toma de decisiones para entrar o salir de una operación.</p>
+      <p>En un mercado con mucha liquidez y volatilidad, la información que aparece en el<strong> OB </strong>fluctúa muy rápidamente y es difícil de seguir. Para facilitar el seguimiento de esta información, es posible visualizar la fluctuación de un<strong> OB </strong>utilizando una herramienta gráfica llamada <strong>Depth Chart</strong>. Hablaremos de la <strong>Depth Chart</strong> más adelante ya que es uno de los elementos fundamentales en la toma de decisiones para entrar o salir de una operación.</p>
       <p>Si entra un <strong>Market Order</strong> de venta, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de compra. En este ejemplo el Price(EUR) sería de 2398.24.</p>
       <p>Si entra un <strong>Market Order</strong> de compra, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de venta. En este ejemplo el Price(EUR) sería de 2398.73. De hecho, podemos ver cómo se ha ejecutado una <strong>Market Order</strong> de compra si nos fijamos en el precio guía actual en verde con dicha cantidad y una flecha indicando que ha subido el precio.</p>
       <p>Para que un precio fluctúe al alza o a la baja, la orden de compra o venta debe superar en cantidad a la orden de compra o venta limitada con la que se empareje. En nuestro ejemplo de OB, si entra una orden de compra de mercado de 2 Ethereum, el precio fluctuará al alza hasta alcanzar los 2398.83. Esta es la explicación:</p>
@@ -76,22 +76,22 @@
         <li><strong>MACD Histogram</strong>:las líneas verticales blancas hacia abajo deben empezar a decrecer y acercarse al eje horizontal de valor 0</li>
         <li><strong>Estocástico</strong>: La línea azul debe situarse por debajo el eje horizontal de valor 20 e iniciar un ascenso rompiendo la línea roja desde abajo</li>
       </ul>
-      <p>Para "predecir" hacia donde fluctuarán los precios con más seguridad, además de los indicadores mencionados, deberemos utilizar el Depth Chart. En la siguiente sección se explica.</p>
+      <p>Para "predecir" hacia donde fluctuarán los precios con más seguridad, además de los indicadores mencionados, deberemos utilizar el <strong>Depth Chart</strong>. En la siguiente sección se explica.</p>
     </div>
   </section>
 
 
   <h2>Depth Chart</h2>
-  <p>El Depth Chart es una representación gráfica del libro de órdenes. Esto nos permite ver con más facilidad las órdenes limitadas de compra y venta que existen en el momento actual. Se puede incrementar o disminuir el nivel de zoom para abarcar más o menos rango de precios.</p>
+  <p>El <strong>Depth Chart</strong> es una representación gráfica del libro de órdenes. Esto nos permite ver con más facilidad las órdenes limitadas de compra y venta que existen en el momento actual. Se puede incrementar o disminuir el nivel de zoom para abarcar más o menos rango de precios.</p>
   <p>Con esta información podemos hacernos una idea si hay más agresividad compradora o vendedora, y por lo tanto hacia donde puede fluctuar el precio.</p>
 
   <section>
     <div><img loading="lazy" src="images/depth-chart.png" alt="order book"/></div>
     <div>
-      <p>La captura de la imágen de la izquierda nos muestra una Depth Chart. Podemos ver que hay dos ejes, que corresponden al rango de precios del Ethereum (eje horizontal) y la cantidad o volumen de Ethereums disponibles (eje vertical).</p>
+      <p>La captura de la imágen de la izquierda nos muestra una <strong>Depth Chart</strong>. Podemos ver que hay dos ejes, que corresponden al rango de precios del Ethereum (eje horizontal) y la cantidad o volumen de Ethereums disponibles (eje vertical).</p>
       <p>Moviendo el ratón podemos abarcar más o menos rango. En el ejemplo podemos ver que para una fluctuación del 0.1% del precio en ambos sentidos hay un volumen total de 44 Ethereums disponibles a ser comprados y 39 Ethereums disponibles a ser vendidos.</p>
       <p>Por regla general, si el volumen de la zona verde es mayor, los precios tienden a ir hacia abajo. Si el volumen en la zona roja es mayor, los precios tienden a ir hacia arriba.</p>
-      <p>Si los indicadores explicados en la sección anterior para entrar en una posición en corto se producen, y comprobamos en la Depth Chart que la tendencia es al alza, nos encontramos en un buen momento para entrar en una operación de compra. En nuestro ejemplo no es un buen momento, por lo menos a corto plazo, ya que el rango seleccionado muestra la línea de -0.1% de la zona verda más alta que la línea 0.1% de la zona roja.</p>
+      <p>Si los indicadores explicados en la sección anterior para entrar en una posición en corto se producen, y comprobamos en la <strong>Depth Chart</strong> que la tendencia es al alza, nos encontramos en un buen momento para entrar en una operación de compra. En nuestro ejemplo no es un buen momento, por lo menos a corto plazo, ya que el rango seleccionado muestra la línea de -0.1% de la zona verda más alta que la línea 0.1% de la zona roja.</p>
   </section>
 
 
@@ -100,12 +100,23 @@
   <ol>
     <li>Nunca operar con un márgen de pérdidas superior al 2% de todo el capital disponible. Por ejemplo, si nuestro capital es de €100, en una orden podemos invertir todo el capital y asumir como máximo €2 de pérdidas. Si tenemos dos órdenes abiertas utilizando todo el capital, en cada orden podremos asumir €1 de pérdidas, o €0.5 y €1.5 respectivamente.</li>
     <li>El método lo es todo. Nunca hay que desviarse del método. No existen las corazonadas ni las intuiciones. Si una operación no está yendo bien y está llegando al 2% de pérdidas, nos salimos de la operación sin dudar. </li>
-    <li>Hay que analizar los mercados detalladamente antes de entrar en una operación. En el momento de entrar en una operación hay que tener claro el precio al que vamos entrar y el precio al que vamos a salir, tanto en Take Profit como en Stop Loss. No se puede improvisar en una orden abierta.</li>
+    <li>Hay que analizar los mercados detalladamente antes de entrar en una operación. Antes de entrar en una operación hay que tener claro el precio al que vamos entrar y el precio al que vamos a salir. No se puede improvisar una vez la orden está abierta. En la sección siguiente conocerás la estrategia de salida con el <strong>Take Profit</strong> y el <strong>Stop Loss</strong>.</li>
     <li>No hay que operar todos los dias. Únicamente hay que operar cuando todos los indicadores confirman que podemos entrar en la operación con el mínimo riesgo. Si estamos varios días sin operar, no pasa nada.</li>
-    <li>No hay que ser avaricioso. Siempre hay que asegurar el beneficio y no esperar grandes retornos. Si un día de suerte hay mucha volatilidad, podemos ir acompañando la tendencia moviendo el Stop Loss gradualmente, pero esto ocurre muy de vez en cuando.</li>
+    <li>No hay que ser avaricioso. Siempre hay que asegurar el beneficio y no esperar grandes retornos. Si un día de suerte hay mucha volatilidad, podemos ir acompañando la tendencia moviendo el <strong>Stop Loss</strong> gradualmente, pero esto ocurre muy de vez en cuando.</li>
   </ol>
 
+  <h2><strong>Take Profit</strong> y <strong>Stop Loss</strong></h2>
 
+  <section>
+    <div><img loading="lazy" src="images/oco.png" alt="one cancels the other"/></div>
+    <div>
+      <p>El <strong>Take Profit</strong> y el <strong>Stop Loss</strong> son órdenes limitadas que se combinan para crear una estrategia de salida para asegurar unas ganancias o minimizar las pérdidas. En Binance este tipo de órdenes se conocen como <strong>OCO</strong> (one cancels the other). Veamos un ejemplo aquí.</p>
+      <p>Supongamos que hemos hecho una compra de Ethereums a €2000. Para crear una estrategia de salida, en Binance crearemos ahora una orden de venta tipo <strong>OCO</strong>. El <strong>Take Profit</strong> lo ponemos a €2200 y el <strong>Stop Loss</strong> lo ponemos a €1900. El <strong>Stop Loss</strong> se activará cuando el precio llegue a €1910, y se ejecutará cuando llegue a €1900. Esta orden <strong>OCO</strong> permanecerá activa hasta que se ejecute el <strong>Take Profit</strong> o el <strong>Stop Loss</strong>. La condición sin ejecutar también se cancela, por lo que no hay riesgo de dejar una operación abierta.</p>
+      <p>Para facilitar la comprensión del ejemplo, hemos puesto números redondos, pero se aconseja no poner este tipo de cifras ya que es lo que suele hacer la mayoría de los operadores. Si queremos asegurar las ganancias, sería recomendable poner el <strong>Take Profit</strong> en €2199. Si queremos no precipitarnos con el <strong>Stop Loss</strong>, mejor ponerlo en €1899.</p>
+      <p>Como podrás comprobar, en esta estrategia <strong>OCO</strong> se está utilizando el ratio <strong>1:2</strong> (compra a €2000, <strong>Stop Loss</strong> a €1900 y <strong>Take Profit</strong> a €2200). Esto significa que por cada pérdida potencial, hay dos veces de ganancias potenciales, por lo que nos permitirá fallar 6 de cada 10 operaciones y aún así salir ganando.</p>
+      <p>También es posible poner una orden <strong>Stop Loss</strong> individual sin necesidad de utilizar una orden <strong>OCO</strong>. En Binance hacemos click en <strong>OCO</strong> y seleccionamos la orden <strong>Stop-limit</strong>.</p>
+      <p>Igualmente también es posible poner una orden <strong>Take Profit</strong> individual sin necesidad de utilizar una orden <strong>OCO</strong>. En Binance seleccionamos la orden <strong>Limit</strong>.</p>
+  </section>
 </body>
 </html>
 
