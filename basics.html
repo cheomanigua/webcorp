@@ -7,7 +7,9 @@
     <script src="js/script.js"></script>
     <style>
       body {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        max-width: 85%;
+        margin: auto;
       }
       section {
         display: flex;
@@ -20,7 +22,7 @@
 
 <body>
 
-  <h1>Criptomonedas</h1>
+  <h1>Criptocurrency Trading</h1>
 
   <p>Las criptomonedas se pueden operar en los <a href="https://coinmarketcap.com/rankings/exchanges/">exchanges</a> de la misma forma que las acciones bursátiles se pueden operar en los <a href="https://es.wikipedia.org/wiki/Br%C3%B3ker">brokers</a>. De igual manera, el <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_t%C3%A9cnico">análisis técnico</a> bursátil se puede aplicar a las criptomonedas.</p>
   
@@ -29,29 +31,29 @@
 
   <p>Para entender el concepto de agresividad, hay que conocer primero los dos tipos de ordenes que se pueden realizar en el mercado: Limit y Market.</p>
 
-  <h3>Limit Orders</h3>
+  <h3><strong>Limit Orders</strong></h3>
 
   <p>Una orden de tipo <strong>Limit</strong> prioriza el precio sobre el tiempo, es decir, sólo se ejecutará cuando llegue al precio que queremos, independientemente de cuánto tarde. Por ejemplo, si queremos vender a €2000 por Ethereum, podemos crear una orden limitada donde especificaremos que sólo venderemos un número determinado de Ethereums cuando el valor por Ethereum llegue a €2000. Ese momento puede tardar unos minutos, unas horas, unos días, unas semanas o unos meses.</p>
   <p>Las ordenes de tipo Limit se pueden consultar en tiempo real desde el <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>. El libro de ordenes únicamente muestra las ordenes tipo Limit y nos puede dar una indicación de hacia dónde puede ir el mercado. Es en cierta manera una forma de "predecir" el futuro.</p>
 
-  <h3>Market Orders</h3>
+  <h3><strong><strong>Market Order</strong>s</strong></h3>
   <p>Una orden de tipo <strong>Market</strong> prioriza el tiempo sobre el precio, es decir, se ejecutará lo antes posible utilizando el primer precio de tipo <strong>Limit</strong> que encuentre. Por ejemplo, si queremos comprar Ethereums inmediatamente, podemos crear una orden de mercado donde especificaremos el número de Ethereums que queremos adquirir. Al ejecutar la orden, el <a href="https://en.wikipedia.org/wiki/Order_matching_system">sistema electrónico de negociación</a> buscará la primera orden limitada de venta del <a href="https://en.wikipedia.org/wiki/Order_book">libro de ordenes</a>.</p>
-  <p>Las ordenes de mercado no se pueden predecir y pueden entrar en cualquier momento. Si entra una orden de mercado con mucho volúmen, puede destrozar cualquier predicción que podamos haber concluido tras analizar el libro de ordenes.</p>
+  <p>Las ordenes de mercado no se pueden predecir y pueden entrar en cualquier momento. Si entra una orden de mercado con mucho volumen, puede destrozar cualquier predicción que podamos haber concluido tras analizar el libro de ordenes.</p>
 
 
   <h3>Agresividad</h3>
-  <p>Un mercado se dice que es alcista cuando la agresividad de los compradores de tipo Market Order es superior a la agresividad de los vendedores de tipo Market Order.</p> 
-  <p>Un mercado se dice que es bajista cuando la agresividad de los vendedores de tipo Market Order es superior a la agresividad de los compradores de tipo Market Order.</p>
-  <p>La agresividad únicamente se da en Market Orders. Los Limits Orders, por su naturaleza pasiva de espera, no afectan tanto a la fluctuación del mercado como los Market Orders.</p>
+  <p>Un mercado se dice que es alcista cuando la agresividad de los compradores de tipo <strong>Market Order</strong> es superior a la agresividad de los vendedores de tipo <strong>Market Order</strong>.</p> 
+  <p>Un mercado se dice que es bajista cuando la agresividad de los vendedores de tipo <strong>Market Order</strong> es superior a la agresividad de los compradores de tipo <strong>Market Order</strong>.</p>
+  <p>La agresividad únicamente se da en <strong><strong>Market Order</strong>s</strong>. Los Limits Orders, por su naturaleza pasiva de espera, no afectan tanto a la fluctuación del mercado como los <strong><strong>Market Order</strong>s</strong>.</p>
  
   <h2>Libro de ordenes</h2>
   <section>
-    <div class="imagen"><img loading="lazy" src="images/order-book.png" alt="order book"/></div>
-    <div class="pepe">
-      <p>En la imágen de la izquierda podemos ver un libro de ordenes (Order Book). En este OB hay tres columnas que corresponden a Price(EUR), Amount(ETH) y Total. En rojo aparecen las ordenes limitadas de venta y en verde aparecen las ordenes limitadas de compra.  Tal como se comentó anteriormente, el OB muestra las Limit Orders activas en ese momento.</p>
-      <p>En un mercado con mucha liquidez y volatilidad, la información que aparece en el OB fluctúa muy rápidamente y es difícil de seguir. Para facilitar el seguimiento de esta información, es posible visualizar la fluctuación de un OB utilizando una herramienta gráfica llamada Depth Chart. Hablaremos de la Depth Chart más adelante ya que es uno de los elementos fundamentales en la toma de decisiones para entrar o salir de una operación.</p>
-      <p>Si entra un Market Order de venta, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de compra. En este ejemplo el Price(EUR) sería de 2398.24.</p>
-      <p>Si entra un Market Order de compra, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de venta. En este ejemplo el Price(EUR) sería de 2398.73. De hecho, podemos ver cómo se ha ejecutado una Market Order de compra si nos fijamos en el precio guía actual en verde con dicha cantidad y una flecha indicando que ha subido el precio.</p>
+    <div><img loading="lazy" src="images/order-book.png" alt="order book"/></div>
+    <div>
+      <p>En la imágen de la izquierda podemos ver un libro de ordenes (Order Book). En este<strong> OB </strong>hay tres columnas que corresponden a Price(EUR), Amount(ETH) y Total. En rojo aparecen las ordenes limitadas de venta y en verde aparecen las ordenes limitadas de compra.  Tal como se comentó anteriormente, el<strong> OB </strong>muestra las <strong>Limit Orders</strong> activas en ese momento.</p>
+      <p>En un mercado con mucha liquidez y volatilidad, la información que aparece en el<strong> OB </strong>fluctúa muy rápidamente y es difícil de seguir. Para facilitar el seguimiento de esta información, es posible visualizar la fluctuación de un<strong> OB </strong>utilizando una herramienta gráfica llamada Depth Chart. Hablaremos de la Depth Chart más adelante ya que es uno de los elementos fundamentales en la toma de decisiones para entrar o salir de una operación.</p>
+      <p>Si entra un <strong>Market Order</strong> de venta, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de compra. En este ejemplo el Price(EUR) sería de 2398.24.</p>
+      <p>Si entra un <strong>Market Order</strong> de compra, el precio de dicha operación corresponderá con el Price(EUR) de la primera orden de venta. En este ejemplo el Price(EUR) sería de 2398.73. De hecho, podemos ver cómo se ha ejecutado una <strong>Market Order</strong> de compra si nos fijamos en el precio guía actual en verde con dicha cantidad y una flecha indicando que ha subido el precio.</p>
       <p>Para que un precio fluctúe al alza o a la baja, la orden de compra o venta debe superar en cantidad a la orden de compra o venta limitada con la que se empareje. En nuestro ejemplo de OB, si entra una orden de compra de mercado de 2 Ethereum, el precio fluctuará al alza hasta alcanzar los 2398.83. Esta es la explicación:</p>
       <ul>
         <li>La primera orden de venta limitada absorberá parte de la orden de compra de mercado en una cantidad de 0.20846 ETH a un precio de 2398.73 EUR. Por lo tanto, todavía quedan 1.79154 Ethereums de la orden de compra de mercado por ejecutar.</li>
@@ -60,6 +62,38 @@
       </ul>
     </div>
   </section>
+
+
+  <h2>Indicadores</h2>
+  <section>
+    <div><img loading="lazy" src="images/indicadores.png" alt="order book"/></div>
+    <div>
+      <p>Los indicadores nos permiten analizar la tendencia de una criptomoneda y así elegir un buen momento para entrar en una operación. Los indicadores que más porcentaje de aciertos me han dado son los siguientes: RSI (Relative Strength Index), MACD y Estocástico. Estos indicadores nos dan una imagen perfecta de lo que ha pasado, pero no de lo que va a pasar. Sin embargo, combinando la información que nos provee dichos indicadores podemos "predecir" hacia donde irá el precio con un ratio de aciertos elevado.</p>
+      <p>La combinación necesaria para tomarse en serio en entrar en una posición en corto (compra) es la siguiente:</p>
+      <ul>
+        <li><strong>RSI</strong>: La línea amarilla debe situarse por debajo el eje horizontal de valor 30 e iniciar un ascenso</li>
+        <li><strong>MACD</strong>:La línea azul debe iniciar movimiento ascendente e indicar cláramente que va a romper la línea roja desde abajo</li>
+        <li><strong>MACD Histogram</strong>:las líneas verticales blancas hacia abajo deben empezar a decrecer y acercarse al eje horizontal de valor 0</li>
+        <li><strong>Estocástico</strong>: La línea azul debe situarse por debajo el eje horizontal de valor 20 e iniciar un ascenso rompiendo la línea roja desde abajo</li>
+      </ul>
+      <p>Para "predecir" hacia donde fluctuarán los precios con más seguridad, además de los indicadores mencionados, deberemos utilizar el Depth Chart. En la siguiente sección se explica.</p>
+    </div>
+  </section>
+
+
+  <h2>Depth Chart</h2>
+  <p>El Depth Chart es una representación gráfica del libro de órdenes. Esto nos permite ver con más facilidad las órdenes limitadas de compra y venta que existen en el momento actual. Se puede incrementar o disminuir el nivel de zoom para abarcar más o menos rango de precios.</p>
+  <p>Con esta información podemos hacernos una idea si hay más agresividad compradora o vendedora, y por lo tanto hacia donde puede fluctuar el precio.</p>
+
+  <section>
+    <div><img loading="lazy" src="images/depth-chart.png" alt="order book"/></div>
+    <div>
+      <p>La captura de la imágen de la izquierda nos muestra una Depth Chart. Podemos ver que hay dos ejes, que corresponden al rango de precios del Ethereum (eje horizontal) y la cantidad o volumen de Ethereums disponibles (eje vertical).</p>
+      <p>Moviendo el ratón podemos abarcar más o menos rango. En el ejemplo podemos ver que para una fluctuación del 0.1% del precio en ambos sentidos hay un volumen total de 44 Ethereums disponibles a ser comprados y 39 Ethereums disponibles a ser vendidos.</p>
+      <p>Por regla general, si el volumen de la zona verde es mayor, los precios tienden a ir hacia abajo. Si el volumen en la zona roja es mayor, los precios tienden a ir hacia arriba.</p>
+      <p>Si los indicadores explicados en la sección anterior para entrar en una posición en corto se producen, y comprobamos en la Depth Chart que la tendencia es al alza, nos encontramos en un buen momento para entrar en una operación de compra. En nuestro ejemplo no es un buen momento, por lo menos a corto plazo, ya que el rango seleccionado muestra la línea de -0.1% de la zona verda más alta que la línea 0.1% de la zona roja.</p>
+  </section>
+
 
   <h2>Risk Management</h2>
   La conservación del capital es la prioridad máxima del trader. La disciplina debe ser total y nunca desviarse del método y del análisis técnico. Los siguientes puntos son esenciales para minimizar el riesgo de pérdidas:
@@ -70,6 +104,7 @@
     <li>No hay que operar todos los dias. Únicamente hay que operar cuando todos los indicadores confirman que podemos entrar en la operación con el mínimo riesgo. Si estamos varios días sin operar, no pasa nada.</li>
     <li>No hay que ser avaricioso. Siempre hay que asegurar el beneficio y no esperar grandes retornos. Si un día de suerte hay mucha volatilidad, podemos ir acompañando la tendencia moviendo el Stop Loss gradualmente, pero esto ocurre muy de vez en cuando.</li>
   </ol>
+
 
 </body>
 </html>
