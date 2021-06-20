@@ -50,3 +50,26 @@ function calculateTakeProfitStopLoss() {
   document.getElementById("stoplosssell").innerHTML = "Stop loss en corto: " + stoplosssell.toFixed(4);
 }
 
+
+function calculateInterest() {
+  let inversion = parseFloat(document.getElementById("inversion").value);
+  let inversion_tax = inversion;
+  let interes = parseFloat(document.getElementById("interes").value);
+  let meses = document.getElementById("meses").value;
+  let anos = document.getElementById("anos").value;
+  let resultado = 0.0;
+  let resultado_sin_impuestos = 0.0;
+  let resultado_con_impuestos = 0.0;
+
+  resultado_sin_impuestos = ((1 + ((interes/100))) ** (meses * anos)) * inversion
+
+  for (let i = 0 ; i < anos ; i++) {
+    resultado = ((1 + ((interes/100))) ** meses) * inversion_tax
+    resultado_con_impuestos = inversion_tax + ((resultado - inversion_tax)*.79)
+    inversion_tax = resultado_con_impuestos;
+  }
+
+  document.getElementById("resultado_sin_impuestos").innerHTML = "Total sin impuestos: " + resultado_sin_impuestos.toFixed(4);
+  document.getElementById("resultado_con_impuestos").innerHTML = "Total con impuestos: " + resultado_con_impuestos.toFixed(4);
+
+}

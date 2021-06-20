@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stock Market Assistant</title>
+    <script src="js/script.js"></script>
+    <style>
+      .resultados, .limits {
+        display: flex;
+        margin-left: -40px;
+      }
+      ul {list-style: none;}
+      li {padding: 1rem 5rem 0 0;}
+    </style>
+</head>
+
+<body>
+
+  <h1>Compound Interest Calculator</h1>
+
+  <ul>
+      <p><input id="inversion"> Inversión inicial</p>
+      <p><input id="interes"> % mensual</p>
+      <p><input id="meses"> Meses</p>
+      <p><input id="anos"> Años</p>
+
+
+      <br><br><br>
+      <button type="button" onclick="calculateInterest()">Calcular interés</button>
+      <p id="resultado"></p>
+      <p id="resultado_sin_impuestos"></p>
+      <p id="resultado_con_impuestos"></p>
+
+
+</body>
+</html>
