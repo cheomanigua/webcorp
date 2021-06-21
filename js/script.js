@@ -50,6 +50,7 @@ function calculateTakeProfitStopLoss() {
   document.getElementById("stoplosssell").innerHTML = "Stop loss en corto: " + stoplosssell.toFixed(4);
 }
 
+// Compount interest calculator
 
 function calculateInterest() {
   let inversion = parseFloat(document.getElementById("inversion").value);
@@ -69,7 +70,7 @@ function calculateInterest() {
     inversion_tax = resultado_con_impuestos;
   }
 
-  document.getElementById("resultado_sin_impuestos").innerHTML = "Total sin impuestos: " + resultado_sin_impuestos.toFixed(4);
-  document.getElementById("resultado_con_impuestos").innerHTML = "Total con impuestos: " + resultado_con_impuestos.toFixed(4);
+  document.getElementById("resultado_sin_impuestos").innerHTML = "Total sin impuestos: " + resultado_sin_impuestos.toFixed(0);
+  document.getElementById("resultado_con_impuestos").innerHTML = "Total con impuestos: " + resultado_con_impuestos.toFixed(0);
 
 }

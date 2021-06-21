@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stock Market Assistant</title>
+    <title>Compound Interest Calculator</title>
     <script src="js/script.js"></script>
     <style>
-      .resultados, .limits {
-        display: flex;
-        margin-left: -40px;
-      }
       ul {list-style: none;}
-      li {padding: 1rem 5rem 0 0;}
+      li {padding: 0 5rem 0 0;}
     </style>
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li><a href="https://webcorp.dev/profit.html">sma</a> </li>
+      <li><a href="https://webcorp.dev/interest.html">cic</a> </li>
+    </ul>
+  </nav>
 
   <h1>Compound Interest Calculator</h1>
 
@@ -28,7 +30,6 @@
 
       <br><br><br>
       <button type="button" onclick="calculateInterest()">Calcular interés</button>
-      <p id="resultado"></p>
       <p id="resultado_sin_impuestos"></p>
       <p id="resultado_con_impuestos"></p>
 
