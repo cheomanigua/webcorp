@@ -7,10 +7,15 @@ function calculateRevenue() {
   let precioVenta = document.getElementById("precioVenta").value;
   let ingresos = (inversion/precioCompra) * precioVenta
 
-  let comision = 0.2
+  let comision = 0
   let fees = ingresos * comision / 100
   let beneficios =  ingresos - inversion - fees;
   let rentabilidad = (beneficios/inversion) * 100
+
+  let comision_binance = 0.2
+  let fees_binance = ingresos * comision_binance / 100
+  let beneficios_binance =  ingresos - inversion - fees_binance;
+  let rentabilidad_binance = (beneficios_binance/inversion) * 100
 
   let comision_coinbase = 0.50
   let fees_coinbase = ingresos * comision_coinbase / 100
@@ -18,12 +23,18 @@ function calculateRevenue() {
   let rentabilidad_coinbase = (beneficios_coinbase/inversion) * 100
 
   document.getElementById("ingresos").innerHTML = "Ingresos: " + ingresos.toFixed(2);
-  document.getElementById("fees").innerHTML = "Fees*: " + fees.toFixed(2);
+  document.getElementById("fees").innerHTML = "Fees: " + fees.toFixed(2);
   document.getElementById("beneficios").innerHTML = "Beneficio: " + beneficios.toFixed(2);
   document.getElementById("rentabilidad").innerHTML = "Rentabilidad: " + rentabilidad.toFixed(2) + "%";
-  document.getElementById("comision").innerHTML = "* La comisión de Binance es de un " + comision.toString() + "%";
+  // document.getElementById("comision").innerHTML = "* Sin comisión " + comision.toString() + "%";
 
-  document.getElementById("ingresos2").innerHTML = "Ingresos: " + ingresos.toFixed(2);
+  document.getElementById("ingresos_binance").innerHTML = "Ingresos: " + ingresos.toFixed(2);
+  document.getElementById("fees_binance").innerHTML = "Fees*: " + fees_binance.toFixed(2);
+  document.getElementById("beneficios_binance").innerHTML = "Beneficio: " + beneficios_binance.toFixed(2);
+  document.getElementById("rentabilidad_binance").innerHTML = "Rentabilidad: " + rentabilidad_binance.toFixed(2) + "%";
+  document.getElementById("comision_binance").innerHTML = "* La comisión de Binance es de un " + comision_binance.toString() + "%";
+
+  document.getElementById("ingresos_coinbase").innerHTML = "Ingresos: " + ingresos.toFixed(2);
   document.getElementById("fees_coinbase").innerHTML = "Fees**: " + fees_coinbase.toFixed(2);
   document.getElementById("beneficios_coinbase").innerHTML = "Beneficio: " + beneficios_coinbase.toFixed(2);
   document.getElementById("rentabilidad_coinbase").innerHTML = "Rentabilidad: " + rentabilidad_coinbase.toFixed(2) + "%";
@@ -68,6 +79,7 @@ function calculateInterest() {
     resultado = ((1 + ((interes/100))) ** meses) * inversion_tax
     resultado_con_impuestos = inversion_tax + ((resultado - inversion_tax)*.79)
     inversion_tax = resultado_con_impuestos;
+    console.log(i + " " + inversion_tax)
   }
 
   document.getElementById("resultado_sin_impuestos").innerHTML = "Total sin impuestos: " + resultado_sin_impuestos.toFixed(0);
